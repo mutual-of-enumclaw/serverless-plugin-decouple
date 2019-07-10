@@ -1,0 +1,20 @@
+{
+    "name": "serverless-plugin-decouple",
+    "version": "1.0.2",
+    "publisher": "Mutual of Enumclaw",
+    "main": "index.js",
+    "description": "Decouples Fn::Import statements to enable redeployment of dependent resources, then recoupling",
+    "license": "MIT",
+    "scripts": {
+        "build": ""
+    },
+    "keywords": [
+        "serverless",
+        "decouple",
+        "import",
+        "cloudformation"
+    ],
+    "dependencies": {
+        "aws-sdk": "^2.489.0"
+    }
+}
