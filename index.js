@@ -55,7 +55,7 @@ class ServerlessPlugin {
 
         this.serverless.cli.log(`Getting cloudformation`);
         var cft = JSON.stringify(this.serverless.service.provider.compiledCloudFormationTemplate);
-        var matches = cft.match(/\{\W*\"Fn::ImportValue\":\W*\"(\w|\-|\_)+\"\W*?\}/g, "i");
+        var matches = cft.match(/\{(\W|\n)*\"Fn::ImportValue\":\W*\"(\w|\-|\_|:)+\"(\W|\n)*?\}/g, "i");
         if(matches) {
             this.serverless.cli.log(`Retrieved matches ` + matches.length);
             for(var match of matches) {
